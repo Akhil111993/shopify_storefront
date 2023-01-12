@@ -1,39 +1,35 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A package for Shopify Storefront GraphQL queries. 
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Simply make Shopify GraphQL queries in just 2 lines of code. The list of queries you can make is available at https://shopify.dev/custom-storefronts/tools/graphiql-storefront-api. This Package is only tested for Storefront APIs. Make a Flutter app from Shopify website as simple as that.
+Exception handling is already included. 
+
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+You have to have a Shopify website to start using this package. This package is used only when you need a Flutter app based on your Shopify website. This package is only tested with storefront api which is used to get product details, customer details etc. A full list of available items can be seen in the link below
+https://shopify.dev/custom-storefronts/tools/graphiql-storefront-api
+The latest version of the Storefront api can also be noted from the above link. The default version we are using is 2023-01. You can change it from the code. You have to create a custom app from the shopify dashboard to get access token.  
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Just add the access token, app name and query in that one line of code
 
 ```dart
-const like = 'sample';
+String query = "query {shop { name } }";
+...
+...
+return FutureBuilder(
+      future: ShopifyStoreFront(
+              'xgg85i66544852o7894byy6ii8546p9', 'esefire-wel')
+          .fetchDataFromShopify(query),
+      builder: (context, snapshot) => Text(snapshot.data ?? ''),
+    );
+
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+All contributions are encouraged. 
+

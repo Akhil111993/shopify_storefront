@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import 'network_exceptions.dart';
 
 class BaseClient {
-  void Function()? onError;
+  
   final baseHeader = {'content-type': 'application/json'};
 
   static const int timeOutDuration = 20;
