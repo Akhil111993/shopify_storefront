@@ -23,8 +23,10 @@ class ShopifyStoreFront {
       'X-Shopify-Storefront-Access-Token': token
     }).catchError(onError);
 
+    /// if response string is null or if exception is thrown an empty string is returned
+    /// Otherwise the response as string is returned
     if (responseString == null) {
-      return '404';
+      return '';
     } else {
       return responseString.toString();
     }
