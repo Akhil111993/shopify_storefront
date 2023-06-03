@@ -1,23 +1,21 @@
 name: shopify_storefront
-description: A Flutter package for Shopify Storefront API. This package helps to easily fetch products and other data using Shopify's StoreFront graphQL API 
-version: 0.0.2
+description: A Flutter package for Shopify Storefront API. This package helps to
+  easily fetch products and other data using Shopify's StoreFront graphQL API
+version: 0.0.3
 repository: https://github.com/Akhil111993/shopify_storefront
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  sdk: ">=2.18.4 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.5
+  http: ^1.0.0
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
 
-
 flutter: null
-
-
